@@ -5,7 +5,7 @@ const Filter = ({ handleChangeFilter }) => {
 
   const handleInputChange = (e) => {
     setFilter(e.target.value);
-    handleChangeFilter(e.target.value);
+    handleChangeFilter(e.target.value); // Тут ви передаєте значення e.target.value до функції handleChangeFilter
   };
 
   return (
@@ -14,11 +14,9 @@ const Filter = ({ handleChangeFilter }) => {
       <input
         type="text"
         value={filter}
-        onChange={handleInputChange}
+        onChange={handleInputChange} // Тут ви передаєте функцію handleInputChange для обробки події onChange
         placeholder="Search contacts"
       />
     </div>
   );
 };
-
-export default Filter;
